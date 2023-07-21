@@ -27,5 +27,10 @@ public class Player : MonoBehaviour
         {
             GameManager.instance.Defeat();
         }
+        if (collision.gameObject.GetComponent<TrigerScore>())
+        {
+            Debug.Log("Score");
+            collision.gameObject.GetComponent<TrigerScore>().Score();
+        }
     }   
 }
